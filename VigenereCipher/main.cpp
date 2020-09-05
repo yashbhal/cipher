@@ -80,20 +80,20 @@ int main()
         cin.ignore();
         cout << "Enter content you want to encrypt: " << endl;
         getline(cin, user_content);
-        cout << user_content << endl;
         encrypted = cipher.encrypt(user_content);
+        cout << "Encrypted: " << encrypted << endl;
         break;
     case 2:
+        cin.ignore();
         cout << "Enter content you want to decrypt: " << endl;
-        cin >> user_content;
+        getline(cin, user_content);
         decrypted = cipher.decrypt(user_content);
+        cout << "Decrypted: " << decrypted << endl;
         break;
     default:
         cout << "Enter either 1 or 2 to perform encryption or decryption " << endl;
     }
-    cout << "User: " << user_content << endl;
-    cout << "Encrypted: " << encrypted << endl;
-    cout << "Decrypted: " << decrypted << endl;
+    
 
 }
 
