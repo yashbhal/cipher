@@ -8,6 +8,7 @@ class Vigenere
 public:
     string key;
 
+    //key function
     Vigenere(string key)
     {
         for (int i = 0; i < key.size(); ++i)
@@ -18,7 +19,7 @@ public:
                 this->key += key[i] + 'A' - 'a';
         }
     }
-
+    //encryption
     string encrypt(string text)
     {
         string out;
@@ -39,6 +40,7 @@ public:
         return out;
     }
 
+    //decryption
     string decrypt(string text)
     {
         string out;
@@ -73,7 +75,7 @@ int main()
     Vigenere cipher(user_key);
     cout << "Enter 1 if you would like to encrypt or 2 if you would like to decrypt content: " << endl;
     cin >> choice;
-
+    //menu
     switch (choice)
     {
     case 1: 
@@ -94,6 +96,5 @@ int main()
         cout << "Enter either 1 or 2 to perform encryption or decryption " << endl;
     }
     
-
 }
 
